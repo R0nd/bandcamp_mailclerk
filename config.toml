@@ -1,0 +1,26 @@
+[email-reading-format]
+type = "auto"
+
+[Personal]
+backend = "imap"
+email = "$EMAIL"
+default = true
+display-name = "-"
+sender = "smtp"
+smtp-host = "smtp.example.org"
+smtp-port = 465
+smtp-ssl = true
+smtp-login = "$EMAIL"
+smtp-passwd-cmd = "echo $MAIL_PWD"
+sync = false
+sync-folders-strategy = "all"
+imap-host = "$IMAP_HOST"
+imap-port = 993
+imap-ssl = true
+imap-login = "$EMAIL"
+imap-passwd-cmd = "echo $MAIL_PWD"
+imap-notify-query = '$QUERY'
+imap-notify-cmd = "/process_mail.sh <id>"
+
+[Personal.email-reading-format]
+type = "auto"
